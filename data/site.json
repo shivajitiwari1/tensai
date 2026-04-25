@@ -1,0 +1,172 @@
+{
+  "stats": [
+    { "num": "15", "sup": "+", "label": "Years of Excellence" },
+    { "num": "5000", "sup": "+", "label": "Students Trained" },
+    { "num": "1600", "sup": "+", "label": "Japanese Companies in India" },
+    { "num": "98", "sup": "%", "label": "Placement Success Rate" }
+  ],
+  "slides": [
+    {
+      "tag": "Premier Japanese Institute",
+      "title": "Learn Japanese, Unlock a World of Opportunity",
+      "desc": "TIJL is Delhi NCR's most trusted Japanese language institute, with 15+ years of excellence in JLPT coaching and career placement.",
+      "bg": "https://tensai.org.in/wp-content/uploads/2016/10/Japanese-Education.jpg",
+      "btn1": { "label": "Explore Courses", "href": "/courses/japanese" },
+      "btn2": { "label": "Register Now", "href": "/registration" }
+    },
+    {
+      "tag": "JLPT Certified Coaching",
+      "title": "All Five JLPT Levels — N5 to N1",
+      "desc": "Comprehensive preparation for the Japanese Language Proficiency Test with expert faculty, updated study material, and mock exams.",
+      "bg": "https://tensai.org.in/wp-content/uploads/2016/10/JLPT-FINAL.jpg",
+      "btn1": { "label": "JLPT Courses", "href": "/courses/jlpt" },
+      "btn2": { "label": "View Fee Structure", "href": "/fees" }
+    },
+    {
+      "tag": "Career Placement Support",
+      "title": "From Classroom to Corporate Japan",
+      "desc": "Our dedicated placement cell connects graduates with 1600+ Japanese companies operating in India across automobile, IT, electronics and more.",
+      "bg": "https://tensai.org.in/wp-content/uploads/2017/03/placement.jpg",
+      "btn1": { "label": "Career Placement", "href": "/services/placement" },
+      "btn2": { "label": "Learn More", "href": "/about" }
+    }
+  ],
+  "highlights": [
+    {
+      "icon": "🎓",
+      "title": "Expert Faculty",
+      "desc": "Our instructors are certified Japanese language experts with years of teaching experience and deep JLPT knowledge.",
+      "link": "/about"
+    },
+    {
+      "icon": "📋",
+      "title": "JLPT Aligned Curriculum",
+      "desc": "Study material is directly in sync with JLPT N5–N1 requirements, ensuring maximum pass rates for our students.",
+      "link": "/courses/jlpt"
+    },
+    {
+      "icon": "💼",
+      "title": "100% Placement Support",
+      "desc": "Dedicated career cell with connections to 1600+ Japanese companies operating across India in diverse sectors.",
+      "link": "/services/placement"
+    }
+  ],
+  "courses": [
+    {
+      "id": "japanese",
+      "title": "Japanese Language",
+      "badge": "Most Popular",
+      "desc": "Structured courses from beginner (N5) to advanced (N1) levels, with JLPT exam preparation built into every stage.",
+      "kanji": "日本語",
+      "tag": "6 Levels • N5 to N1",
+      "href": "/courses/japanese"
+    },
+    {
+      "id": "jlpt",
+      "title": "JLPT Preparation",
+      "badge": "Certified",
+      "desc": "Intensive exam preparation for all five JLPT levels with mock tests, past papers, and focused coaching sessions.",
+      "kanji": "試験",
+      "tag": "July & December Exams",
+      "href": "/courses/jlpt"
+    },
+    {
+      "id": "international",
+      "title": "International Language",
+      "badge": "New",
+      "desc": "Expand beyond Japanese with our international language coaching programs, delivered by specialist faculty.",
+      "kanji": "語学",
+      "tag": "Multiple Languages",
+      "href": "/courses/international"
+    }
+  ],
+  "services": [
+    { "icon": "💼", "title": "Career Placement", "desc": "Dedicated placement cell connecting students with Japanese companies across India.", "href": "/services/placement" },
+    { "icon": "🗣️", "title": "Career Counselling", "desc": "One-on-one guidance sessions to help plan your career in Japanese-related industries.", "href": "/services/counselling" },
+    { "icon": "🎌", "title": "Extra Activities", "desc": "Cultural events, speech contests, calligraphy, origami and Japanese cultural immersion.", "href": "/services/activities" },
+    { "icon": "✈️", "title": "Study in Japan", "desc": "Guidance on scholarships, university admissions, and student visa for studying in Japan.", "href": "/services/study-japan" }
+  ],
+  "whyPoints": [
+    "Audio-visual tools and conversation-based learning methodology",
+    "Study material aligned with updated JLPT curriculum",
+    "Periodic assessments and doubt-clearing sessions",
+    "Small batch sizes for personalized attention",
+    "Experienced faculty with industry connections",
+    "Post-course career placement assistance"
+  ],
+  "fees": [
+    {
+      "title": "Basic Course",
+      "level": "Conversational / N5",
+      "price": "₹6,000",
+      "duration": "3–4 months",
+      "popular": false,
+      "features": ["Conversational Japanese Level I", "Basic Sentences & Patterns", "Hiragana & Katakana", "Basic Kanji (100 chars)", "N5 JLPT Preparation", "Study Material Included"]
+    },
+    {
+      "title": "Intermediate Course",
+      "level": "N4 / N3 Levels",
+      "price": "₹9,500",
+      "duration": "4–6 months",
+      "popular": true,
+      "features": ["Intermediate Japanese I & II", "400 Kanji Characters", "2000+ Vocabulary Words", "Reading & Writing Skills", "N4 / N3 JLPT Preparation", "Mock Tests Included"]
+    },
+    {
+      "title": "Advanced Course",
+      "level": "N2 / N1 Levels",
+      "price": "₹14,000",
+      "duration": "6–8 months",
+      "popular": false,
+      "features": ["Advanced Sentence Patterns", "Business Japanese", "Translation & Interpretation", "Conversation with Native Level", "N2 / N1 JLPT Preparation", "Career Placement Support"]
+    }
+  ],
+  "batchTimings": [
+    {
+      "description": "Weekday Timing",
+      "batch1": "10:00 AM – 12:30 PM",
+      "batch2": "2:30 PM – 5:00 PM",
+      "batch3": "6:30 PM – 7:45 PM"
+    },
+    {
+      "description": "Weekday Days",
+      "batch1": "Mon & Thu / Tue & Fri / Wed & Sat",
+      "batch2": "Mon & Thu / Tue & Fri / Wed & Sat",
+      "batch3": "Monday – Thursday (4 Days)"
+    },
+    {
+      "description": "Weekend Timing",
+      "batch1": "10:00 AM – 1:30 PM",
+      "batch2": "2:30 PM – 6:00 PM",
+      "batch3": "—"
+    },
+    {
+      "description": "Weekend Days",
+      "batch1": "Saturday & Sunday",
+      "batch2": "Saturday & Sunday",
+      "batch3": "—"
+    }
+  ],
+  "jlptLevels": [
+    { "level": "N5", "name": "Beginner", "desc": "Basic understanding of Japanese in familiar daily situations.", "highlight": false },
+    { "level": "N4", "name": "Elementary", "desc": "Ability to understand basic Japanese in everyday situations.", "highlight": false },
+    { "level": "N3", "name": "Intermediate", "desc": "Ability to understand Japanese in everyday situations to a certain degree.", "highlight": true },
+    { "level": "N2", "name": "Advanced", "desc": "Ability to understand Japanese in a wide variety of circumstances.", "highlight": false },
+    { "level": "N1", "name": "Proficient", "desc": "Ability to comprehend Japanese in a broad range of situations.", "highlight": false }
+  ],
+  "japaneseLevels": [
+    { "badge": "Level I — N5", "title": "Conversational Japanese Language", "desc": "The course is for those who have not studied Japanese Language. Basic sentences, patterns, conversational expressions and kanji are introduced through pattern practices and interactive programs. Students are entitled to appear in N5 of the Japanese Language Proficiency Test." },
+    { "badge": "Level II — Fast Track", "title": "Fast Track Basic Japanese Language", "desc": "This course is for you if you have no prior knowledge of Japanese Language. You will learn basic skills to enable you to make yourself understood and to find out information in everyday situations. An accelerated approach to core fundamentals." },
+    { "badge": "Level III — N5", "title": "Basic Japanese Language Course", "desc": "For those who have not studied Japanese language. Basic sentences, patterns, conversational expressions and kanji are introduced through pattern practices and interactive programs. Students are entitled to appear in N5 of the Japanese Language Proficiency Test." },
+    { "badge": "Level IV — N4", "title": "Intermediate Japanese Language Course", "desc": "This course is for students who have completed the basic course. It offers 400 kanji, 2000 words and lessons for writing and reading in simple sentences. It enables students to appear in N4 of the Japanese Language Proficiency Test." },
+    { "badge": "Level V — N3", "title": "Upper Intermediate Japanese Language", "desc": "Students who have completed Intermediate I are entitled to join this course, where they are trained in intermediate-level sentence patterns and conversational expressions. The course enables students to read, write, and speak in Japanese, making them eligible for N3 of JLPT." },
+    { "badge": "Level VI — N2", "title": "Advanced Japanese Language Course", "desc": "This course introduces advanced level sentence patterns and conversation. After completion, students will be able to have smooth conversation with Japanese speakers on different topics and write or translate business-related documents. It enables interpretation proficiency and makes students eligible for N2 of JLPT." }
+  ],
+  "placementSectors": ["🚗 Automobile", "📱 Electronics", "⚡ Power Systems", "💻 Software Dev", "🏦 Banking & Finance", "🏥 Healthcare", "🎓 Education", "🌐 IT Services"],
+  "contact": {
+    "address": "C-78, Second Floor, Sector-2, Noida (Near Priya Gold Biscuits)",
+    "phone": "+91-7289026558",
+    "email": "japanindia1947@gmail.com",
+    "hours": "Monday – Saturday: 9:00 AM – 7:00 PM",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.3065878095!2d77.3088!3d28.5849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM1JzA1LjYiTiA3N8KwMTgnMzEuNiJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+  }
+}

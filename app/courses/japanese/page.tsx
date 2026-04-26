@@ -29,7 +29,7 @@ export default function JapanesePage() {
                 ))}
               </div>
 
-              <div style={{ display: 'flex', gap: 16, marginTop: 32, flexWrap: 'wrap' }}>
+              <div className="prose-btns" style={{ marginTop: 32 }}>
                 <Link href="/registration" className="btn-primary">Enrol Now</Link>
                 <Link href="/fees" className="btn-outline-red">View Fee Structure</Link>
                 <Link href="/batch-timing" className="btn-outline-red">Batch Timings</Link>

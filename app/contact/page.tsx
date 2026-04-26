@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Breadcrumb from '@/components/Breadcrumb'
 import siteData from '@/data/site.json'
+import Link from 'next/link'
 
 export default function ContactPage() {
   const { contact } = siteData
@@ -49,14 +50,14 @@ export default function ContactPage() {
                   <div className="contact-icon">📞</div>
                   <div className="contact-detail-text">
                     <strong>Phone</strong>
-                    <a href={`tel:${contact.phone}`}>{contact.phone}</a>
+                    <Link href={`tel:${contact.phone}`}>{contact.phone}</Link>
                   </div>
                 </div>
                 <div className="contact-detail">
                   <div className="contact-icon">✉️</div>
                   <div className="contact-detail-text">
                     <strong>Email</strong>
-                    <a href={`mailto:${contact.email}`}>{contact.email}</a>
+                    <Link href={`mailto:${contact.email}`}>{contact.email}</Link>
                   </div>
                 </div>
                 <div className="contact-detail">
@@ -67,12 +68,10 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-
-              <div className="map-embed" style={{ marginTop: 24 }}>
+              <div className="map-embed">
                 <iframe
                   src={contact.mapEmbed}
                   title="TIJL Location"
-                  style={{ width: '100%', height: 340, display: 'block', border: 'none' }}
                   loading="lazy"
                 />
               </div>
@@ -80,7 +79,7 @@ export default function ContactPage() {
 
             <div className="form-card">
               <h2>Send Us a Message</h2>
-              {status === 'success' && <div className="alert-success">✓ Message sent! We'll get back to you soon.</div>}
+              {status === 'success' && <div className="alert-success">✓ Message sent! We&apos;ll get back to you soon.</div>}
               {status === 'error' && <div className="alert-error">Something went wrong. Please try again.</div>}
               <form onSubmit={handleSubmit}>
                 <div className="form-group">

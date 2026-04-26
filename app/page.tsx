@@ -22,14 +22,14 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Why Choose Us Highlights */}
+      {/* Why Choose Us */}
       <section className="section">
         <div className="container">
           <div className="section-header">
             <span className="eyebrow">Why Choose TIJL</span>
-            <h2>Delhi NCR's Most Trusted Japanese Institute</h2>
+            <h2>Delhi NCR&apos;s Most Trusted Japanese Institute</h2>
             <div className="divider" />
-            <p>Combining expert faculty, JLPT-aligned curriculum, and dedicated career placement support.</p>
+            <p>Expert faculty, JLPT-aligned curriculum, and dedicated career placement support.</p>
           </div>
           <div className="highlights-grid">
             {highlights.map((h, i) => (
@@ -89,14 +89,14 @@ export default function HomePage() {
             </div>
             <div className="why-content">
               <span className="eyebrow">About TIJL</span>
-              <h2>The Right Institute for Your Japanese Language Journey</h2>
+              <h2>The Right Institute for Your Japanese Journey</h2>
               <p>TIJL has been shaping Japanese language professionals for over 15 years in Delhi NCR. Our methodology combines conversational learning, JLPT exam prep, and real-world career support.</p>
               <ul className="why-list">
                 {whyPoints.map((p, i) => (
                   <li key={i}><span className="check">✓</span>{p}</li>
                 ))}
               </ul>
-              <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+              <div className="why-btns">
                 <Link href="/about" className="btn-primary">About TIJL</Link>
                 <Link href="/registration" className="btn-outline-red">Register Now</Link>
               </div>

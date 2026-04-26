@@ -25,15 +25,9 @@ export default function RegistrationPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
-      if (res.ok) {
-        setStatus('success')
-        setForm(initialForm)
-      } else {
-        setStatus('error')
-      }
-    } catch {
-      setStatus('error')
-    }
+      if (res.ok) { setStatus('success'); setForm(initialForm) }
+      else setStatus('error')
+    } catch { setStatus('error') }
   }
 
   return (
@@ -45,7 +39,7 @@ export default function RegistrationPage() {
           <div style={{ maxWidth: 860, margin: '0 auto' }}>
             <div className="reg-form-wrap">
               <h2>Student Registration Form</h2>
-              <p style={{ fontSize: 15, color: 'var(--ink-muted)', marginBottom: 32 }}>
+              <p className="reg-intro">
                 Fill in the form below and our team will contact you to confirm your enrollment and batch details.
               </p>
 
@@ -92,7 +86,7 @@ export default function RegistrationPage() {
                     <label>City</label>
                     <input value={form.city} onChange={set('city')} placeholder="Your city" />
                   </div>
-                  <div className="form-group">
+                  <div className="form-group" style={{ gridColumn: '1 / -1' }}>
                     <label>Course / Level *</label>
                     <select required value={form.courseLevel} onChange={set('courseLevel')}>
                       <option value="">Select a course...</option>
@@ -106,7 +100,7 @@ export default function RegistrationPage() {
                       <option>International Language</option>
                     </select>
                   </div>
-                  <div className="form-group">
+                  <div className="form-group" style={{ gridColumn: '1 / -1' }}>
                     <label>Preferred Batch</label>
                     <select value={form.batchType} onChange={set('batchType')}>
                       <option value="">Select...</option>
@@ -121,7 +115,7 @@ export default function RegistrationPage() {
                     <label>Home Address</label>
                     <input value={form.address} onChange={set('address')} placeholder="Street address" />
                   </div>
-                  <div className="form-group">
+                  <div className="form-group" style={{ gridColumn: '1 / -1' }}>
                     <label>How Did You Hear About Us?</label>
                     <select value={form.howHeard} onChange={set('howHeard')}>
                       <option value="">Select...</option>

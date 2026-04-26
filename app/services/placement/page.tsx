@@ -12,7 +12,7 @@ export default function PlacementPage() {
 
       <section className="section">
         <div className="container">
-          <div className="why-grid">
+          <div className="placement-why-grid">
             <div className="prose">
               <img src="https://tensai.org.in/wp-content/uploads/2017/03/placement.jpg" alt="Career Placement" className="feature-img" />
               <h2>Career Placement Services</h2>
@@ -20,7 +20,7 @@ export default function PlacementPage() {
               <p>Japan has the 2nd largest economy in the world and is a prosperous country with the most diverse economy in Asia, with a GDP of $4.9 trillion. Japanese is a gateway to other Asian languages and cultures.</p>
             </div>
             <div>
-              <div className="why-visual" style={{ minHeight: 320 }}>
+              <div className="why-visual" style={{ minHeight: 300 }}>
                 <span className="why-kanji">仕事</span>
                 <div className="why-pills">
                   <div className="why-pill"><div className="why-pill-icon">🏭</div><div className="why-pill-text"><strong>Automobile</strong><span>Leading Japanese auto brands</span></div></div>

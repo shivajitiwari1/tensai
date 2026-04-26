@@ -8,9 +8,9 @@ export default function Topbar() {
           <Link href="tel:+917289026558">📞 +91-7289026558</Link>
           <Link href="mailto:japanindia1947@gmail.com">✉ japanindia1947@gmail.com</Link>
         </div>
-        <div className="topbar-notice">
-          <span>🎌 New Batch Starting Soon</span>
-          <Link href="/registration">Register Now →</Link>
+        <div className="topbar-contacts" style={{ opacity: 0.75, fontSize: 12 }}>
+          <span>Mon–Sat: 9:00 AM – 7:00 PM</span>
+          <span>📍 Sector-2, Noida</span>
         </div>
       </div>
     </div>

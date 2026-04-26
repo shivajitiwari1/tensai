@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Topbar from '@/components/Topbar'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import ConditionalLayout from '@/components/ConditionalLayout'
 
 export const metadata: Metadata = {
   title: 'Tensai Japanese Language Institute Noida | TIJL',
@@ -13,10 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <Topbar />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ConditionalLayout>{children}</ConditionalLayout>
       </body>
     </html>
   )

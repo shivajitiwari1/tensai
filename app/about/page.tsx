@@ -28,10 +28,14 @@ export default function AboutPage() {
               <p>Our training methods are focused on teaching every aspect of the Japanese language. Students are trained in vocabulary building, listening and reading. Training includes vocabulary building, reading, listening and grammar.</p>
 
               <h3>Our Director</h3>
-              <img src="https://tensai.org.in/wp-content/uploads/2017/08/director-ten.jpg" alt="Director" style={{ width: 220, borderRadius: 12, border: '1px solid var(--border)', marginBottom: 16 }} />
+              <img
+                src="https://tensai.org.in/wp-content/uploads/2017/08/director-ten.jpg"
+                alt="Director"
+                style={{ width: 200, maxWidth: '100%', borderRadius: 12, border: '1px solid var(--border)', marginBottom: 16 }}
+              />
               <p>Under experienced leadership, TIJL has grown to become one of the most trusted Japanese language institutes in the Delhi NCR region, with a proven track record of student success in JLPT examinations and career placements.</p>
 
-              <div style={{ display: 'flex', gap: 16, marginTop: 24, flexWrap: 'wrap' }}>
+              <div className="prose-btns">
                 <Link href="/contact" className="btn-primary">Contact Us</Link>
                 <Link href="/registration" className="btn-outline-red">Register Now</Link>
               </div>
@@ -53,9 +57,9 @@ export default function AboutPage() {
               </div>
               <div className="sidebar-box">
                 <h3>Contact Info</h3>
-                <div style={{ fontSize: 14, color: 'var(--ink-muted)', display: 'flex', flexDirection: 'column', gap: 12 }}>
-                  <div>📞 <Link href="tel:+917289026558" style={{ color: 'var(--red)' }}>+91-7289026558</Link></div>
-                  <div>✉ <Link href="mailto:japanindia1947@gmail.com" style={{ color: 'var(--red)', fontSize: 13 }}>japanindia1947@gmail.com</Link></div>
+                <div className="sidebar-contact">
+                  <div>📞 <Link href="tel:+917289026558">+91-7289026558</Link></div>
+                  <div>✉ <Link href="mailto:japanindia1947@gmail.com">japanindia1947@gmail.com</Link></div>
                   <div>📍 C-78, Second Floor, Sector-2, Noida (Near Priya Gold Biscuits)</div>
                 </div>
               </div>

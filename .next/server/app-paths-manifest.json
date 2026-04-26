@@ -1,3 +1,17 @@
 {
-  "/page": "app/page.js"
+  "/api/admin/check-auth/route": "app/api/admin/check-auth/route.js",
+  "/api/admin/registrations/route": "app/api/admin/registrations/route.js",
+  "/api/admin/announcements/route": "app/api/admin/announcements/route.js",
+  "/api/admin/messages/route": "app/api/admin/messages/route.js",
+  "/api/admin/site/route": "app/api/admin/site/route.js",
+  "/api/admin/logout/route": "app/api/admin/logout/route.js",
+  "/api/admin/login/route": "app/api/admin/login/route.js",
+  "/admin/registrations/page": "app/admin/registrations/page.js",
+  "/admin/site/announcements/page": "app/admin/site/announcements/page.js",
+  "/admin/site/courses/page": "app/admin/site/courses/page.js",
+  "/admin/site/stats/page": "app/admin/site/stats/page.js",
+  "/admin/site/batch-timing/page": "app/admin/site/batch-timing/page.js",
+  "/admin/dashboard/page": "app/admin/dashboard/page.js",
+  "/admin/site/fees/page": "app/admin/site/fees/page.js",
+  "/admin/login/page": "app/admin/login/page.js"
 }

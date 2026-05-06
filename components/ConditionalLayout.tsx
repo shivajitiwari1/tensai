@@ -4,7 +4,6 @@ import Topbar from '@/components/Topbar'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import NewsTicker from '@/components/NewsTicker'
-
 export default function ConditionalLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const isAdmin = pathname.startsWith('/admin')

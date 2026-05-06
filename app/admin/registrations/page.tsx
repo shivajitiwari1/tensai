@@ -6,7 +6,7 @@ import { useAdminAuth } from '@/components/useAdminAuth'
 interface Registration {
   id: string; firstName: string; lastName: string; email: string; phone: string;
   whatsapp: string; dob: string; gender: string; city: string; address: string;
-  courseLevel: string; batchType: string; howHeard: string; message: string;
+  courseLevel: string; howHeard: string; message: string;
   status: string; createdAt: string;
 }
 
@@ -102,7 +102,6 @@ export default function RegistrationsPage() {
                 <tr>
                   <th>Student</th>
                   <th>Course</th>
-                  <th>Batch</th>
                   <th>Date</th>
                   <th>Status</th>
                   <th>Actions</th>
@@ -122,7 +121,6 @@ export default function RegistrationsPage() {
                       </button>
                     </td>
                     <td style={{ fontSize: 13 }}>{r.courseLevel}</td>
-                    <td style={{ fontSize: 12, color: '#7a7a7a' }}>{r.batchType || '—'}</td>
                     <td style={{ fontSize: 12, color: '#7a7a7a', whiteSpace: 'nowrap' }}>{fmt(r.createdAt)}</td>
                     <td><span className={`badge badge-${r.status}`}>{r.status}</span></td>
                     <td>
@@ -177,7 +175,6 @@ export default function RegistrationsPage() {
                 ['City', selected.city || '—'],
                 ['Address', selected.address || '—'],
                 ['Course / Level', selected.courseLevel],
-                ['Preferred Batch', selected.batchType || '—'],
                 ['How Heard', selected.howHeard || '—'],
                 ['Registered On', fmt(selected.createdAt)],
               ].map(([l, v]) => (

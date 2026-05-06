@@ -14,56 +14,86 @@ export default function BatchTimingPage() {
         <div className="container">
           <div className="section-header">
             <span className="eyebrow">Flexible Schedules</span>
-            <h2>Batch Schedule</h2>
+            <h2>Institute Batch Timing</h2>
             <div className="divider" />
-            <p>Choose the batch that fits your schedule — weekday and weekend options available.</p>
+            <p>Online and offline classes available for our institute batches. Friday is weekly off and every class runs for 2 hours.</p>
           </div>
 
-          <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, marginBottom: 24, textAlign: 'center' }}>Japanese Language Course</h3>
+          <div className="batch-highlights">
+            <div className="batch-highlight-item">
+              <span>🌐</span>
+              <div>
+                <strong>Online + Offline</strong>
+                <p>Learn in-person or from home.</p>
+              </div>
+            </div>
+            <div className="batch-highlight-item">
+              <span>⏱️</span>
+              <div>
+                <strong>2 Hour Classes</strong>
+                <p>Focused sessions for fast progress.</p>
+              </div>
+            </div>
+            <div className="batch-highlight-item">
+              <span>📅</span>
+              <div>
+                <strong>Friday Off</strong>
+                <p>Weekly rest day for students.</p>
+              </div>
+            </div>
+          </div>
 
-          <div className="batch-table-wrap">
-            <table className="batch-table">
-              <thead>
-                <tr>
-                  <th>Description</th>
-                  <th>Batch I</th>
-                  <th>Batch II</th>
-                  <th>Batch III</th>
-                </tr>
-              </thead>
-              <tbody>
-                {batchTimings.map((row, i) => (
-                  <tr key={i}>
-                    <td><strong>{row.description}</strong></td>
-                    <td>{row.batch1.includes('AM') || row.batch1.includes('PM') ? <span className="time-badge">{row.batch1}</span> : row.batch1}</td>
-                    <td>{row.batch2.includes('AM') || row.batch2.includes('PM') ? <span className="time-badge">{row.batch2}</span> : row.batch2}</td>
-                    <td style={{ color: row.batch3 === '—' ? 'var(--ink-soft)' : undefined }}>{row.batch3.includes('AM') || row.batch3.includes('PM') ? <span className="time-badge">{row.batch3}</span> : row.batch3}</td>
+          <div className="batch-table-card">
+            <div className="batch-table-wrap">
+              <table className="batch-table">
+                <thead>
+                  <tr>
+                    <th>Description</th>
+                    <th>Batch I</th>
+                    <th>Batch II</th>
+                    <th>Batch III</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {batchTimings.map((row, i) => (
+                    <tr key={i}>
+                      <td><strong>{row.description}</strong></td>
+                      <td>{row.batch1.includes('AM') || row.batch1.includes('PM') ? <span className="time-badge">{row.batch1}</span> : row.batch1}</td>
+                      <td>{row.batch2.includes('AM') || row.batch2.includes('PM') ? <span className="time-badge">{row.batch2}</span> : row.batch2}</td>
+                      <td style={{ color: row.batch3 === '—' ? 'var(--ink-soft)' : undefined }}>{row.batch3.includes('AM') || row.batch3.includes('PM') ? <span className="time-badge">{row.batch3}</span> : row.batch3}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <div className="services-grid" style={{ marginTop: 48 }}>
-            <div className="service-card">
-              <span className="sc-icon">🌅</span>
-              <h3>Morning Batch</h3>
-              <p>10:00 AM – 12:30 PM. Ideal for students and homemakers with free mornings.</p>
+          <h3 className="section-subtitle">Pick Your Best Batch</h3>
+
+          <div className="batch-card-grid">
+            <div className="batch-card">
+              <div className="batch-card-icon">📘</div>
+              <h3>Monday & Wednesday</h3>
+              <p>10:00 AM – 12:00 PM</p>
+              <span>Online + Offline</span>
             </div>
-            <div className="service-card">
-              <span className="sc-icon">☀️</span>
-              <h3>Afternoon Batch</h3>
-              <p>2:30 PM – 5:00 PM. Perfect for those with morning commitments.</p>
+            <div className="batch-card">
+              <div className="batch-card-icon">📙</div>
+              <h3>Tuesday & Thursday</h3>
+              <p>2:00 PM – 4:00 PM</p>
+              <span>Online + Offline</span>
             </div>
-            <div className="service-card">
-              <span className="sc-icon">🌆</span>
-              <h3>Evening Batch</h3>
-              <p>6:30 PM – 7:45 PM. Designed for working professionals.</p>
+            <div className="batch-card">
+              <div className="batch-card-icon">📗</div>
+              <h3>Saturday & Sunday</h3>
+              <p>10:00 AM – 12:00 PM</p>
+              <span>Weekend Intensive</span>
             </div>
-            <div className="service-card">
-              <span className="sc-icon">📅</span>
-              <h3>Weekend Batch</h3>
-              <p>Saturday & Sunday. For those who cannot attend weekdays.</p>
+            <div className="batch-card">
+              <div className="batch-card-icon">🛌</div>
+              <h3>Friday Weekly Off</h3>
+              <p>Recharge, revise, and prepare for the week.</p>
+              <span>Rest day for students</span>
             </div>
           </div>
 

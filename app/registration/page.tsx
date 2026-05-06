@@ -1,32 +1,62 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Breadcrumb from '@/components/Breadcrumb'
 
 const initialForm = {
   firstName: '', lastName: '', dob: '', gender: '',
   email: '', phone: '', whatsapp: '',
   address: '', city: '', state: '',
-  courseLevel: '', batchType: '', howHeard: '', message: ''
+  courseLevel: '', howHeard: '', message: '',
+  educationQual: '',
 }
 
 export default function RegistrationPage() {
   const [form, setForm] = useState(initialForm)
+  const [photo, setPhoto] = useState<File | null>(null)
+  const [photoPreview, setPhotoPreview] = useState<string | null>(null)
+  const [eduDoc, setEduDoc] = useState<File | null>(null)
+  const [idProof, setIdProof] = useState<File | null>(null)
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+
+  const photoRef = useRef<HTMLInputElement>(null)
+  const eduRef  = useRef<HTMLInputElement>(null)
+  const idRef   = useRef<HTMLInputElement>(null)
 
   const set = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setForm(f => ({ ...f, [field]: e.target.value }))
+
+  const handlePhoto = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] ?? null
+    setPhoto(file)
+    if (file) {
+      const reader = new FileReader()
+      reader.onload = ev => setPhotoPreview(ev.target?.result as string)
+      reader.readAsDataURL(file)
+    } else {
+      setPhotoPreview(null)
+    }
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('loading')
     try {
-      const res = await fetch('/api/registrations', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      })
-      if (res.ok) { setStatus('success'); setForm(initialForm) }
-      else setStatus('error')
+      const fd = new FormData()
+      Object.entries(form).forEach(([k, v]) => fd.append(k, v))
+      if (photo)   fd.append('photo', photo)
+      if (eduDoc)  fd.append('eduDoc', eduDoc)
+      if (idProof) fd.append('idProof', idProof)
+
+      const res = await fetch('/api/registrations', { method: 'POST', body: fd })
+      if (res.ok) {
+        setStatus('success')
+        setForm(initialForm)
+        setPhoto(null); setPhotoPreview(null)
+        setEduDoc(null); setIdProof(null)
+        if (photoRef.current) photoRef.current.value = ''
+        if (eduRef.current)   eduRef.current.value   = ''
+        if (idRef.current)    idRef.current.value    = ''
+      } else setStatus('error')
     } catch { setStatus('error') }
   }
 
@@ -44,10 +74,44 @@ export default function RegistrationPage() {
               </p>
 
               {status === 'success' && <div className="alert-success">✓ Registration submitted! We will contact you soon to confirm your batch details.</div>}
-              {status === 'error' && <div className="alert-error">Something went wrong. Please try again or call us directly.</div>}
+              {status === 'error'   && <div className="alert-error">Something went wrong. Please try again or call us directly.</div>}
 
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} encType="multipart/form-data">
                 <div className="reg-grid">
+
+                  {/* ── Photo Upload ── */}
+                  <div className="form-group" style={{ gridColumn: '1 / -1' }}>
+                    <label>Passport Size Photo</label>
+                    <div className="upload-photo-row">
+                      <div
+                        className="photo-preview"
+                        onClick={() => photoRef.current?.click()}
+                        title="Click to upload photo"
+                      >
+                        {photoPreview
+                          ? <img src={photoPreview} alt="Preview" />
+                          : <div className="photo-placeholder">
+                              <span>📷</span>
+                              <small>Click to upload photo</small>
+                            </div>
+                        }
+                      </div>
+                      <div className="photo-meta">
+                        <p>Upload a recent passport-size photograph.</p>
+                        <ul>
+                          <li>Clear front-facing photo</li>
+                          <li>JPG or PNG format</li>
+                          <li>Max size: 2 MB</li>
+                        </ul>
+                        <button type="button" className="upload-btn" onClick={() => photoRef.current?.click()}>
+                          {photo ? `✓ ${photo.name}` : 'Choose Photo'}
+                        </button>
+                        <input ref={photoRef} type="file" accept="image/*" onChange={handlePhoto} style={{ display: 'none' }} />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* ── Personal Info ── */}
                   <div className="form-group">
                     <label>First Name *</label>
                     <input required value={form.firstName} onChange={set('firstName')} placeholder="First name" />
@@ -86,6 +150,51 @@ export default function RegistrationPage() {
                     <label>City</label>
                     <input value={form.city} onChange={set('city')} placeholder="Your city" />
                   </div>
+
+                  {/* ── Education Qualification ── */}
+                  <div className="form-group" style={{ gridColumn: '1 / -1' }}>
+                    <label>Education Qualification *</label>
+                    <div className="upload-doc-row">
+                      <select required value={form.educationQual} onChange={set('educationQual')} style={{ flex: 1 }}>
+                        <option value="">Select highest qualification...</option>
+                        <option>10th Pass (High School)</option>
+                        <option>12th Pass (Intermediate)</option>
+                        <option>Diploma</option>
+                        <option>Bachelor's Degree (B.A. / B.Sc. / B.Com / B.Tech)</option>
+                        <option>Master's Degree (M.A. / M.Sc. / M.Com / M.Tech)</option>
+                        <option>PhD / Doctorate</option>
+                        <option>Other</option>
+                      </select>
+                      <div className="upload-doc-btn-wrap">
+                        <button type="button" className={`upload-btn ${eduDoc ? 'upload-btn-done' : ''}`} onClick={() => eduRef.current?.click()}>
+                          {eduDoc ? `✓ ${eduDoc.name}` : '📎 Upload Certificate'}
+                        </button>
+                        <input ref={eduRef} type="file" accept=".pdf,.jpg,.jpeg,.png" onChange={e => setEduDoc(e.target.files?.[0] ?? null)} style={{ display: 'none' }} />
+                        <small>PDF, JPG or PNG · Max 5 MB</small>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* ── ID Proof ── */}
+                  <div className="form-group" style={{ gridColumn: '1 / -1' }}>
+                    <label>ID Proof *</label>
+                    <div className="upload-doc-row">
+                      <div className="upload-doc-box" onClick={() => idRef.current?.click()}>
+                        <span className="upload-doc-icon">🪪</span>
+                        <div>
+                          <strong>{idProof ? idProof.name : 'Upload Identity Document'}</strong>
+                          <p>Aadhaar Card, PAN Card, Passport or Voter ID</p>
+                          <small>PDF, JPG or PNG · Max 5 MB</small>
+                        </div>
+                        <button type="button" className={`upload-btn ${idProof ? 'upload-btn-done' : ''}`}>
+                          {idProof ? '✓ Uploaded' : 'Choose File'}
+                        </button>
+                        <input ref={idRef} type="file" accept=".pdf,.jpg,.jpeg,.png" onChange={e => setIdProof(e.target.files?.[0] ?? null)} style={{ display: 'none' }} />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* ── Course & Other ── */}
                   <div className="form-group" style={{ gridColumn: '1 / -1' }}>
                     <label>Course / Level *</label>
                     <select required value={form.courseLevel} onChange={set('courseLevel')}>
@@ -98,17 +207,6 @@ export default function RegistrationPage() {
                       <option>Level VI — Advanced (N2)</option>
                       <option>JLPT Preparation</option>
                       <option>International Language</option>
-                    </select>
-                  </div>
-                  <div className="form-group" style={{ gridColumn: '1 / -1' }}>
-                    <label>Preferred Batch</label>
-                    <select value={form.batchType} onChange={set('batchType')}>
-                      <option value="">Select...</option>
-                      <option>Morning (10:00 AM – 12:30 PM)</option>
-                      <option>Afternoon (2:30 PM – 5:00 PM)</option>
-                      <option>Evening (6:30 PM – 7:45 PM)</option>
-                      <option>Weekend — Morning (10:00 AM – 1:30 PM)</option>
-                      <option>Weekend — Afternoon (2:30 PM – 6:00 PM)</option>
                     </select>
                   </div>
                   <div className="form-group" style={{ gridColumn: '1 / -1' }}>
@@ -131,6 +229,7 @@ export default function RegistrationPage() {
                     <textarea value={form.message} onChange={set('message')} placeholder="Any specific questions or requirements you'd like us to know..." />
                   </div>
                 </div>
+
                 <button type="submit" className="submit-btn" disabled={status === 'loading'} style={{ marginTop: 8 }}>
                   {status === 'loading' ? 'Submitting...' : 'Submit Registration →'}
                 </button>

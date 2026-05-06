@@ -10,7 +10,7 @@ export default function ActivitiesPage() {
 
       <section className="section">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header activities-header-anim" style={{ animationDelay: '0.1s' }}>
             <span className="eyebrow">Beyond the Classroom</span>
             <h2>Cultural & Extra-Curricular Activities</h2>
             <div className="divider" />
@@ -26,7 +26,7 @@ export default function ActivitiesPage() {
               ['🍱', 'Food Culture Sessions', 'Discover Japanese cuisine, dining etiquette, and the cultural significance of food.'],
               ['🎬', 'Anime & J-Drama Club', 'Watch and discuss Japanese media to improve listening comprehension in a fun setting.'],
             ].map(([icon, title, desc], i) => (
-              <div key={i} className="activity-card">
+              <div key={i} className="activity-card" style={{ animationDelay: `${0.2 + i * 0.1}s` }}>
                 <div className="activity-icon">{icon}</div>
                 <h3>{title}</h3>
                 <p>{desc}</p>
@@ -34,7 +34,7 @@ export default function ActivitiesPage() {
             ))}
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: 48 }}>
+          <div className="activities-cta-anim" style={{ textAlign: 'center', marginTop: 48, animationDelay: '0.85s' }}>
             <Link href="/registration" className="btn-primary">Join TIJL Today</Link>
           </div>
         </div>

@@ -150,75 +150,66 @@
   ],
   "fees": [
     {
-      "title": "Basic Course",
-      "level": "Conversational / N5",
-      "price": "₹6,000",
-      "duration": "3–4 months",
+      "title": "Japanese Language (Weekend)",
+      "level": "N1, N2, N3, N4, N5",
+      "price": "₹25,000/-",
+      "duration": "6 months",
       "popular": false,
       "features": [
-        "Conversational Japanese Level I",
-        "Basic Sentences & Patterns",
-        "Hiragana & Katakana",
-        "Basic Kanji (100 chars)",
-        "N5 JLPT Preparation",
-        "Study Material Included"
+        "Registration Fee - ₹12,500/- (Non-refundable)",
+        "Tuition Fee - ₹12,500/-",
+        "Duration - 6 Months",
+        "Class Time - 2 Hours",
+        "Friday Weekly Off",
+        "Online & Offline Both Classes Available",
+        "Levels - N1, N2, N3, N4, N5"
       ]
     },
     {
-      "title": "Intermediate Course",
-      "level": "N4 / N3 Levels",
-      "price": "₹9,500",
-      "duration": "4–6 months",
-      "popular": true,
-      "features": [
-        "Intermediate Japanese I & II",
-        "400 Kanji Characters",
-        "2000+ Vocabulary Words",
-        "Reading & Writing Skills",
-        "N4 / N3 JLPT Preparation",
-        "Mock Tests Included"
-      ]
-    },
-    {
-      "title": "Advanced Course",
-      "level": "N2 / N1 Levels",
-      "price": "₹14,000",
-      "duration": "6–8 months",
+      "title": "Japanese Language (Weekday)",
+      "level": "N1, N2, N3, N4, N5",
+      "price": "₹25,000/-",
+      "duration": "6 months",
       "popular": false,
       "features": [
-        "Advanced Sentence Patterns",
-        "Business Japanese",
-        "Translation & Interpretation",
-        "Conversation with Native Level",
-        "N2 / N1 JLPT Preparation",
-        "Career Placement Support"
+        "Registration Fee - ₹12,500/- (Non-refundable)",
+        "Tuition Fee - ₹12,500/-",
+        "Duration - 6 Months",
+        "Class Time - 2 Hours",
+        "Friday Weekly Off",
+        "Online & Offline Both Classes Available",
+        "Levels - N1, N2, N3, N4, N5"
       ]
     }
   ],
+  "feeBreakdown": [
+    { "label": "Registration Charges", "amount": "₹12,500" },
+    { "label": "Tuition Fee", "amount": "₹12,500" }
+  ],
   "batchTimings": [
     {
-      "description": "Weekday Timing",
-      "batch1": "10:00 AM – 12:30 PM",
-      "batch2": "2:30 PM – 5:00 PM",
-      "batch3": "6:30 PM – 7:45 PM"
+      "description": "Class Timing",
+      "batch1": "10:00 AM – 12:00 PM",
+      "batch2": "2:00 PM – 4:00 PM",
+      "batch3": "10:00 AM – 12:00 PM"
     },
     {
-      "description": "Weekday Days",
-      "batch1": "Mon & Thu / Tue & Fri / Wed & Sat",
-      "batch2": "Mon & Thu / Tue & Fri / Wed & Sat",
-      "batch3": "Monday – Thursday (4 Days)"
+      "description": "Days",
+      "batch1": "Monday & Wednesday",
+      "batch2": "Tuesday & Thursday",
+      "batch3": "Saturday & Sunday"
     },
     {
-      "description": "Weekend Timing",
-      "batch1": "10:00 AM – 1:30 PM",
-      "batch2": "2:30 PM – 6:00 PM",
-      "batch3": "—"
+      "description": "Weekly Off",
+      "batch1": "Friday",
+      "batch2": "Friday",
+      "batch3": "Friday"
     },
     {
-      "description": "Weekend Days",
-      "batch1": "Saturday & Sunday",
-      "batch2": "Saturday & Sunday",
-      "batch3": "—"
+      "description": "Class Duration",
+      "batch1": "2 Hours",
+      "batch2": "2 Hours",
+      "batch3": "2 Hours"
     }
   ],
   "jlptLevels": [

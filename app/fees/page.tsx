@@ -10,30 +10,29 @@ export default function FeesPage() {
     <>
       <Breadcrumb title="Fee Structure" items={[{ label: 'Home', href: '/' }, { label: 'Fee Structure' }]} />
 
-      <section className="section">
+      <section className="section fees-section">
         <div className="container">
           <div className="section-header">
             <span className="eyebrow">Transparent Pricing</span>
             <h2>Course Fee Structure</h2>
             <div className="divider" />
-            <p>Affordable, transparent fees for all levels. No hidden charges.</p>
+            <p>Weekend and weekday Japanese language batches for levels N1–N5. Online and offline classes available, Friday weekly off, and 2-hour class sessions. Clear registration and tuition amounts, with no hidden fees.</p>
           </div>
 
           <div className="fee-grid">
             {fees.map((f, i) => (
-              <div key={i} className={`fee-card${f.popular ? ' popular' : ''}`}>
+              <div key={i} className={`fee-card${f.popular ? ' popular' : ''}`} style={{ animationDelay: `${i * 120}ms` }}>
                 {f.popular && <div className="popular-badge">⭐ Most Popular</div>}
                 <div className="fee-card-header">
                   <h3>{f.title}</h3>
+                  <div className="fee-price">Total Fee: {f.price}</div>
                   <div className="level">{f.level}</div>
-                  <div className="fee-price">{f.price}<span>/course</span></div>
-                  <div className="fee-duration">{f.duration} duration</div>
                 </div>
                 <ul className="fee-features">
                   {f.features.map((feat, j) => <li key={j}>{feat}</li>)}
                 </ul>
                 <div className="fee-cta">
-                  <Link href="/registration" className="fee-cta-btn">Enrol Now</Link>
+                  <Link href="/registration" className="fee-cta-btn">Registration</Link>
                 </div>
               </div>
             ))}

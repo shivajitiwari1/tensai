@@ -71,30 +71,19 @@ export default function BatchTimingPage() {
           <h3 className="section-subtitle">Pick Your Best Batch</h3>
 
           <div className="batch-card-grid">
-            <div className="batch-card">
-              <div className="batch-card-icon">📘</div>
-              <h3>Monday & Wednesday</h3>
-              <p>10:00 AM – 12:00 PM</p>
-              <span>Online + Offline</span>
-            </div>
-            <div className="batch-card">
-              <div className="batch-card-icon">📙</div>
-              <h3>Tuesday & Thursday</h3>
-              <p>2:00 PM – 4:00 PM</p>
-              <span>Online + Offline</span>
-            </div>
-            <div className="batch-card">
-              <div className="batch-card-icon">📗</div>
-              <h3>Saturday & Sunday</h3>
-              <p>10:00 AM – 12:00 PM</p>
-              <span>Weekend Intensive</span>
-            </div>
-            <div className="batch-card">
-              <div className="batch-card-icon">🛌</div>
-              <h3>Friday Weekly Off</h3>
-              <p>Recharge, revise, and prepare for the week.</p>
-              <span>Rest day for students</span>
-            </div>
+            {[
+              { icon: '📘', days: 'Monday & Wednesday', time: '10:00 AM – 12:00 PM', type: 'Online + Offline' },
+              { icon: '📙', days: 'Tuesday & Thursday',  time: '2:00 PM – 4:00 PM',   type: 'Online + Offline' },
+              { icon: '📗', days: 'Saturday & Sunday',   time: '10:00 AM – 12:00 PM', type: 'Weekend Intensive' },
+            ].map((b, i) => (
+              <Link key={i} href="/registration" className="batch-card batch-card-link">
+                <div className="batch-card-icon">{b.icon}</div>
+                <h3>{b.days}</h3>
+                <p>{b.time}</p>
+                <span>{b.type}</span>
+                <div className="batch-card-cta">Register for this Batch →</div>
+              </Link>
+            ))}
           </div>
 
           <div style={{ textAlign: 'center', marginTop: 40 }}>

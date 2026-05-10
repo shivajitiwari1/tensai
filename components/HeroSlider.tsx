@@ -13,11 +13,13 @@ interface Slide {
 
 export default function HeroSlider({ slides }: { slides: Slide[] }) {
   const [cur, setCur] = useState(0)
+  const [paused, setPaused] = useState(false)
 
   useEffect(() => {
-    const timer = setInterval(() => setCur(c => (c + 1) % slides.length), 5000)
+    if (paused) return
+    const timer = setInterval(() => setCur(c => (c + 1) % slides.length), 7000)
     return () => clearInterval(timer)
-  }, [slides.length])
+  }, [slides.length, paused])
 
   const go = (n: number) => setCur(((n % slides.length) + slides.length) % slides.length)
 
@@ -47,14 +49,29 @@ export default function HeroSlider({ slides }: { slides: Slide[] }) {
 
       <div className="hero-dots">
         {slides.map((_, i) => (
-          <div
+          <button
             key={i}
             className={`hero-dot${i === cur ? ' active' : ''}`}
             onClick={() => go(i)}
-            role="button"
             aria-label={`Slide ${i + 1}`}
           />
         ))}
+        <button
+          className="hero-play-pause"
+          onClick={() => setPaused(p => !p)}
+          aria-label={paused ? 'Play slideshow' : 'Pause slideshow'}
+        >
+          {paused ? (
+            <svg width="9" height="10" viewBox="0 0 12 14" fill="currentColor">
+              <path d="M0 0l12 7-12 7z"/>
+            </svg>
+          ) : (
+            <svg width="9" height="10" viewBox="0 0 12 14" fill="currentColor">
+              <rect x="0" y="0" width="4" height="14" rx="1"/>
+              <rect x="8" y="0" width="4" height="14" rx="1"/>
+            </svg>
+          )}
+        </button>
       </div>
     </div>
   )

@@ -1,10 +1,9 @@
 {
   "/fees/page": "app/fees/page.js",
-  "/batch-timing/page": "app/batch-timing/page.js",
-  "/page": "app/page.js",
-  "/gallery/page": "app/gallery/page.js",
-  "/registration/page": "app/registration/page.js",
-  "/courses/japanese/page": "app/courses/japanese/page.js",
   "/courses/jlpt/page": "app/courses/jlpt/page.js",
-  "/courses/international/page": "app/courses/international/page.js"
+  "/page": "app/page.js",
+  "/courses/international/page": "app/courses/international/page.js",
+  "/courses/japanese/page": "app/courses/japanese/page.js",
+  "/registration/page": "app/registration/page.js",
+  "/batch-timing/page": "app/batch-timing/page.js"
 }

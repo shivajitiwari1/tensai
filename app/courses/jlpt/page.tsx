@@ -22,7 +22,7 @@ export default function JLPTPage() {
 
           <div className="jlpt-grid">
             {jlptLevels.map((l, i) => (
-              <div key={i} className={`jlpt-card${l.highlight ? ' highlight-card-jlpt' : ''}`}>
+              <div key={i} className="jlpt-card">
                 <div className="level-label">{l.level}</div>
                 <div className="level-name">{l.name}</div>
                 <div className="level-desc">{l.desc}</div>
@@ -30,7 +30,28 @@ export default function JLPTPage() {
             ))}
           </div>
 
-          <img src="https://tensai.org.in/wp-content/uploads/2016/10/JLPT-FINAL.jpg" alt="JLPT" style={{ width: '100%', maxWidth: 700, borderRadius: 14, display: 'block', margin: '0 auto 48px', border: '1px solid var(--border)' }} />
+          {/* JLPT level bar chart */}
+          <div style={{ maxWidth: 780, margin: '0 auto 56px', background: '#1a1a2e', borderRadius: 20, padding: '40px 48px 32px', boxShadow: '0 24px 64px rgba(0,0,0,.28)' }}>
+            <p style={{ color: 'rgba(255,255,255,.85)', fontSize: 17, fontWeight: 700, letterSpacing: 3, textTransform: 'uppercase', marginBottom: 36, textAlign: 'center' }}>JLPT Level Progression</p>
+            <div style={{ display: 'flex', alignItems: 'flex-end', gap: 16, height: 220 }}>
+              {[
+                { level: 'N5', h: '38%', label: 'Beginner',     color: '#e74c3c' },
+                { level: 'N4', h: '52%', label: 'Elementary',   color: '#d44000' },
+                { level: 'N3', h: '66%', label: 'Intermediate', color: '#c0392b' },
+                { level: 'N2', h: '82%', label: 'Advanced',     color: '#a93226' },
+                { level: 'N1', h: '100%', label: 'Proficient',  color: '#8e1e1e' },
+              ].map(b => (
+                <div key={b.level} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0, height: '100%', justifyContent: 'flex-end' }}>
+                  <span style={{ color: 'rgba(255,255,255,.9)', fontSize: 14, fontWeight: 700, letterSpacing: 0.5, marginBottom: 12, textAlign: 'center', lineHeight: 1.4 }}>{b.label}</span>
+                  <div style={{ width: '100%', height: b.h, background: `linear-gradient(180deg, ${b.color}ee, ${b.color})`, borderRadius: '10px 10px 0 0', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: `0 -4px 20px ${b.color}88` }}>
+                    <span style={{ color: '#fff', fontFamily: "'Playfair Display',serif", fontWeight: 800, fontSize: 32, textShadow: '0 2px 6px rgba(0,0,0,.4)' }}>{b.level}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div style={{ height: 3, background: 'rgba(255,255,255,.2)', marginTop: 0, borderRadius: 2 }} />
+            <p style={{ color: 'rgba(255,255,255,.7)', fontSize: 15, marginTop: 16, textAlign: 'center', fontWeight: 500 }}>N5 (easiest) → N1 (most advanced)</p>
+          </div>
 
           <div className="highlights-grid">
             <div className="highlight-card">

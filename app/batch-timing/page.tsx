@@ -56,7 +56,7 @@ export default function BatchTimingPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {batchTimings.map((row, i) => (
+                  {batchTimings.map((row: { description: string; batch1: string; batch2: string; batch3: string }, i: number) => (
                     <tr key={i}>
                       <td><strong>{row.description}</strong></td>
                       <td>{row.batch1.includes('AM') || row.batch1.includes('PM') ? <span className="time-badge">{row.batch1}</span> : row.batch1}</td>

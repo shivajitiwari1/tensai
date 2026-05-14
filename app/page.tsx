@@ -5,8 +5,8 @@ import { getSiteData } from '@/lib/getSiteData'
 
 export const dynamic = 'force-dynamic'
 
-export default async function HomePage() {
-  const { slides, stats, highlights, courses, services, whyPoints } = await getSiteData()
+export default function HomePage() {
+  const { slides, stats, highlights, courses, services, whyPoints } = getSiteData()
 
   return (
     <>

@@ -5,8 +5,8 @@ import { getSiteData } from '@/lib/getSiteData'
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Fee Structure | TIJL' }
 
-export default async function FeesPage() {
-  const { fees } = await getSiteData()
+export default function FeesPage() {
+  const { fees } = getSiteData()
   return (
     <>
       <Breadcrumb title="Fee Structure" items={[{ label: 'Home', href: '/' }, { label: 'Fee Structure' }]} />

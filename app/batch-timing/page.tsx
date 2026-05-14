@@ -5,8 +5,8 @@ import { getSiteData } from '@/lib/getSiteData'
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Batch Timing | TIJL' }
 
-export default async function BatchTimingPage() {
-  const { batchTimings } = await getSiteData()
+export default function BatchTimingPage() {
+  const { batchTimings } = getSiteData()
   return (
     <>
       <Breadcrumb title="Batch Timing" items={[{ label: 'Home', href: '/' }, { label: 'Batch Timing' }]} />

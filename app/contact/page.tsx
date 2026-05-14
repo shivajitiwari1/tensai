@@ -5,8 +5,8 @@ import ContactForm from './ContactForm'
 
 export const dynamic = 'force-dynamic'
 
-export default async function ContactPage() {
-  const { contact } = await getSiteData()
+export default function ContactPage() {
+  const { contact } = getSiteData()
 
   return (
     <>

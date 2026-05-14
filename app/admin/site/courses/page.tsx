@@ -76,7 +76,7 @@ export default function CoursesEditorPage() {
               </div>
             </div>
           ))}
-          <button className="add-item-btn" onClick={() => setItems(s => [...s, { id: '', title: '', badge: '', desc: '', kanji: '', tag: '', href: '/' }])}>
+          <button className="add-item-btn" onClick={() => setItems(s => [...s, { id: Date.now().toString(), title: '', badge: '', desc: '', kanji: '', tag: '', href: '/' }])}>
             ＋ Add Course
           </button>
         </div>

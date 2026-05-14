@@ -1,10 +1,12 @@
 import HeroSlider from '@/components/HeroSlider'
 import CTABand from '@/components/CTABand'
 import Link from 'next/link'
-import siteData from '@/data/site.json'
+import { getSiteData } from '@/lib/getSiteData'
+
+export const dynamic = 'force-dynamic'
 
 export default function HomePage() {
-  const { slides, stats, highlights, courses, services, whyPoints } = siteData
+  const { slides, stats, highlights, courses, services, whyPoints } = getSiteData()
 
   return (
     <>

@@ -1,9 +1,13 @@
 {
-  "/fees/page": "app/fees/page.js",
-  "/courses/jlpt/page": "app/courses/jlpt/page.js",
   "/page": "app/page.js",
-  "/courses/international/page": "app/courses/international/page.js",
-  "/courses/japanese/page": "app/courses/japanese/page.js",
-  "/registration/page": "app/registration/page.js",
-  "/batch-timing/page": "app/batch-timing/page.js"
+  "/api/admin/site/route": "app/api/admin/site/route.js",
+  "/api/announcements/route": "app/api/announcements/route.js",
+  "/api/admin/check-auth/route": "app/api/admin/check-auth/route.js",
+  "/api/admin/registrations/route": "app/api/admin/registrations/route.js",
+  "/api/admin/messages/route": "app/api/admin/messages/route.js",
+  "/admin/dashboard/page": "app/admin/dashboard/page.js",
+  "/admin/login/page": "app/admin/login/page.js",
+  "/admin/site/slides/page": "app/admin/site/slides/page.js",
+  "/admin/site/announcements/page": "app/admin/site/announcements/page.js",
+  "/admin/site/stats/page": "app/admin/site/stats/page.js"
 }

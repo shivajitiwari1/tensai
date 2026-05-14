@@ -1,12 +1,13 @@
 import Breadcrumb from '@/components/Breadcrumb'
 import CTABand from '@/components/CTABand'
 import Link from 'next/link'
-import siteData from '@/data/site.json'
+import { getSiteData } from '@/lib/getSiteData'
 
+export const dynamic = 'force-dynamic'
 export const metadata = { title: 'JLPT Preparation | TIJL' }
 
 export default function JLPTPage() {
-  const { jlptLevels } = siteData
+  const { jlptLevels } = getSiteData()
   return (
     <>
       <Breadcrumb title="JLPT" items={[{ label: 'Home', href: '/' }, { label: 'Courses', href: '/' }, { label: 'JLPT' }]} />

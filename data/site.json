@@ -183,8 +183,14 @@
     }
   ],
   "feeBreakdown": [
-    { "label": "Registration Charges", "amount": "₹12,500" },
-    { "label": "Tuition Fee", "amount": "₹12,500" }
+    {
+      "label": "Registration Charges",
+      "amount": "₹12,500"
+    },
+    {
+      "label": "Tuition Fee",
+      "amount": "₹12,500"
+    }
   ],
   "batchTimings": [
     {

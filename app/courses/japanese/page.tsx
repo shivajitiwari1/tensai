@@ -1,12 +1,13 @@
 import Breadcrumb from '@/components/Breadcrumb'
 import CTABand from '@/components/CTABand'
 import Link from 'next/link'
-import siteData from '@/data/site.json'
+import { getSiteData } from '@/lib/getSiteData'
 
+export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Japanese Language Courses | TIJL' }
 
 export default function JapanesePage() {
-  const { japaneseLevels, highlights } = siteData
+  const { japaneseLevels, highlights } = getSiteData()
   const scheduleBatches = ['Monday & Wednesday', 'Tuesday & Thursday', 'Saturday & Sunday']
 
   return (

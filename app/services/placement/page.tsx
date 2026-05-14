@@ -1,11 +1,12 @@
 import Breadcrumb from '@/components/Breadcrumb'
 import CTABand from '@/components/CTABand'
-import siteData from '@/data/site.json'
+import { getSiteData } from '@/lib/getSiteData'
 
+export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Career Placement | TIJL' }
 
 export default function PlacementPage() {
-  const { placementSectors } = siteData
+  const { placementSectors } = getSiteData()
   return (
     <>
       <Breadcrumb title="Career Placement" items={[{ label: 'Home', href: '/' }, { label: 'Services' }, { label: 'Career Placement' }]} />

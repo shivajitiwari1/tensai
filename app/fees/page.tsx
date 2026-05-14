@@ -1,11 +1,12 @@
 import Breadcrumb from '@/components/Breadcrumb'
 import Link from 'next/link'
-import siteData from '@/data/site.json'
+import { getSiteData } from '@/lib/getSiteData'
 
+export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Fee Structure | TIJL' }
 
 export default function FeesPage() {
-  const { fees } = siteData
+  const { fees } = getSiteData()
   return (
     <>
       <Breadcrumb title="Fee Structure" items={[{ label: 'Home', href: '/' }, { label: 'Fee Structure' }]} />

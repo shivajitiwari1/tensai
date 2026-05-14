@@ -6,8 +6,8 @@ import { getSiteData } from '@/lib/getSiteData'
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Japanese Language Courses | TIJL' }
 
-export default function JapanesePage() {
-  const { japaneseLevels, highlights } = getSiteData()
+export default async function JapanesePage() {
+  const { japaneseLevels, highlights } = await getSiteData()
   const scheduleBatches = ['Monday & Wednesday', 'Tuesday & Thursday', 'Saturday & Sunday']
 
   return (

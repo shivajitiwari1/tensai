@@ -6,8 +6,8 @@ import { getSiteData } from '@/lib/getSiteData'
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'JLPT Preparation | TIJL' }
 
-export default function JLPTPage() {
-  const { jlptLevels } = getSiteData()
+export default async function JLPTPage() {
+  const { jlptLevels } = await getSiteData()
   return (
     <>
       <Breadcrumb title="JLPT" items={[{ label: 'Home', href: '/' }, { label: 'Courses', href: '/' }, { label: 'JLPT' }]} />

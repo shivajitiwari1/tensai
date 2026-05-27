@@ -37,7 +37,7 @@ export default function Footer() {
           <ul>
             <li><span>📍 Sector-2, Noida</span></li>
             <li><Link href="tel:+917289026558">📞 +91-7289026558</Link></li>
-            <li><Link href="mailto:japanindia1947@gmail.com" style={{ fontSize: 13 }}>✉ japanindia1947@gmail.com</Link></li>
+            <li><Link href="mailto:tensaieducation@gmail.com" style={{ fontSize: 13 }}>✉ tensaieducation@gmail.com</Link></li>
             <li><Link href="/about">About Us</Link></li>
             <li><Link href="/registration">Register Now</Link></li>
           </ul>

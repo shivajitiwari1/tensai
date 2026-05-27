@@ -59,7 +59,7 @@ export default function AboutPage() {
                 <h3>Contact Info</h3>
                 <div className="sidebar-contact">
                   <div>📞 <Link href="tel:+917289026558">+91-7289026558</Link></div>
-                  <div>✉ <Link href="mailto:japanindia1947@gmail.com">japanindia1947@gmail.com</Link></div>
+                  <div>✉ <Link href="mailto:tensaieducation@gmail.com">tensaieducation@gmail.com</Link></div>
                   <div>📍 C-78, Second Floor, Sector-2, Noida (Near Priya Gold Biscuits)</div>
                 </div>
               </div>

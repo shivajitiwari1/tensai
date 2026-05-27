@@ -17,8 +17,7 @@ const SMTP_CONFIG = {
   tls: { rejectUnauthorized: false },
 }
 
-// Testing: shivajitiwari@gmail.com — change to tensaieducation@gmail.com after verification
-const NOTIFY_EMAIL = 'shivajitiwari@gmail.com'
+const NOTIFY_EMAIL = 'tensaieducation@gmail.com'
 
 function readData() {
   try { return JSON.parse(readFileSync(DATA_FILE, 'utf-8')) } catch { return [] }
@@ -111,7 +110,6 @@ async function sendRegistrationEmail(
     transporter.sendMail({
       from: `"Tensai Institute of Japanese Language" <${SMTP_CONFIG.auth.user}>`,
       to: NOTIFY_EMAIL,
-      bcc: 'ssharan8@gmail.com',
       subject: `New Registration: ${entry.firstName} ${entry.lastName} — ${entry.courseLevel}`,
       html: adminHtml,
       attachments,

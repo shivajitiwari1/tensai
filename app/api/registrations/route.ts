@@ -185,13 +185,17 @@ export async function POST(req: NextRequest) {
     data.push(entry)
     tryWriteData(data)
 
-    // Send emails — always works (outbound network, not filesystem)
-    sendRegistrationEmail(
-      entry,
-      photoBuffer, photoFile?.name ?? null,
-      eduBuffer,   eduDocFile?.name ?? null,
-      idBuffer,    idProofFile?.name ?? null,
-    ).catch(err => console.error('Email send failed:', err))
+    // Await emails before returning — Vercel kills background tasks after response is sent
+    try {
+      await sendRegistrationEmail(
+        entry,
+        photoBuffer, photoFile?.name ?? null,
+        eduBuffer,   eduDocFile?.name ?? null,
+        idBuffer,    idProofFile?.name ?? null,
+      )
+    } catch (err) {
+      console.error('Email send failed:', err)
+    }
 
     return NextResponse.json({ success: true, id }, { status: 201 })
   } catch (err) {

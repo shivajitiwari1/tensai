@@ -118,8 +118,12 @@ export async function POST(req: NextRequest) {
     data.push(entry)
     tryWriteData(data)
 
-    // Send emails — always works (outbound network, not filesystem)
-    sendContactEmails(entry).catch(err => console.error('Contact email failed:', err))
+    // Await emails before returning — Vercel kills background tasks after response is sent
+    try {
+      await sendContactEmails(entry)
+    } catch (err) {
+      console.error('Contact email failed:', err)
+    }
 
     return NextResponse.json({ success: true, id: entry.id }, { status: 201 })
   } catch {

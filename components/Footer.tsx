@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="footer-grid">
         <div className="footer-brand">
           <img
-            src="https://tensai.org.in/wp-content/uploads/2019/04/cropped-Tensai-Logo-copy-2.jpg"
+            src="/images/logo.jpg"
             alt="Tensai"
             style={{ height: 52, borderRadius: 6, background: '#fff', padding: 4, marginBottom: 12, display: 'block' }}
           />

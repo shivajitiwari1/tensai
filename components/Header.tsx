@@ -43,7 +43,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="header-logo">
             <img
-              src="https://tensai.org.in/wp-content/uploads/2019/04/cropped-Tensai-Logo-copy-2.jpg"
+              src="/images/logo.jpg"
               alt="Tensai Japanese Language Institute"
             />
           </Link>

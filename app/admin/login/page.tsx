@@ -35,7 +35,7 @@ export default function AdminLoginPage() {
       <div className="admin-login-wrap">
         <div className="admin-login-card">
           <div className="admin-login-logo">
-            <img src="https://tensai.org.in/wp-content/uploads/2019/04/cropped-Tensai-Logo-copy-2.jpg" alt="Tensai" />
+            <img src="/images/logo.jpg" alt="Tensai" />
             <h1>TIJL Admin Panel</h1>
             <p>Sign in to manage your website</p>
           </div>

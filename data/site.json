@@ -26,7 +26,7 @@
       "tag": "Premier Japanese Institute",
       "title": "Learn Japanese, Unlock a World of Opportunity",
       "desc": "TIJL is Delhi NCR's most trusted Japanese language institute, with 15+ years of excellence in JLPT coaching and career placement.",
-      "bg": "https://tensai.org.in/wp-content/uploads/2016/10/Japanese-Education.jpg",
+      "bg": "/images/japanese-education.jpg",
       "btn1": {
         "label": "Explore Courses",
         "href": "/courses/japanese"
@@ -40,7 +40,7 @@
       "tag": "JLPT Certified Coaching",
       "title": "All Five JLPT Levels — N5 to N1",
       "desc": "Comprehensive preparation for the Japanese Language Proficiency Test with expert faculty, updated study material, and mock exams.",
-      "bg": "https://tensai.org.in/wp-content/uploads/2016/10/JLPT-FINAL.jpg",
+      "bg": "/images/jlpt.jpg",
       "btn1": {
         "label": "JLPT Courses",
         "href": "/courses/jlpt"
@@ -54,7 +54,7 @@
       "tag": "Career Placement Support",
       "title": "From Classroom to Corporate Japan",
       "desc": "Our dedicated placement cell connects graduates with 1600+ Japanese companies operating in India across automobile, IT, electronics and more.",
-      "bg": "https://tensai.org.in/wp-content/uploads/2017/03/placement.jpg",
+      "bg": "/images/placement.jpg",
       "btn1": {
         "label": "Career Placement",
         "href": "/services/placement"

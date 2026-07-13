@@ -15,7 +15,7 @@ export default function PlacementPage() {
         <div className="container">
           <div className="placement-why-grid">
             <div className="prose">
-              <img src="https://tensai.org.in/wp-content/uploads/2017/03/placement.jpg" alt="Career Placement" className="feature-img" />
+              <img src="/images/placement.jpg" alt="Career Placement" className="feature-img" />
               <h2>Career Placement Services</h2>
               <p>TENSAI Institute offers students many opportunities — more than 1600 Japanese companies are operating in India in sectors like automobile, electronics, power systems, software development, and many more.</p>
               <p>Japan has the 2nd largest economy in the world and is a prosperous country with the most diverse economy in Asia, with a GDP of $4.9 trillion. Japanese is a gateway to other Asian languages and cultures.</p>

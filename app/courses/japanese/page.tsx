@@ -97,7 +97,7 @@ export default function JapanesePage() {
         <div className="container">
           <div className="content-with-sidebar">
             <div className="prose">
-              <img src="https://tensai.org.in/wp-content/uploads/2016/10/Japanese-Education.jpg" alt="Japanese Language" className="feature-img" />
+              <img src="/images/japanese-education.jpg" alt="Japanese Language" className="feature-img" />
               <h2>Become a confident Japanese communicator</h2>
               <p>Our Japanese programme blends language fundamentals with real JLPT practice, live conversation drills, and exam-ready strategies. Whether you are starting from scratch or moving toward N1, TIJL delivers the structure and support you need.</p>
 

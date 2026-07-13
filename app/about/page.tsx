@@ -13,7 +13,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="content-with-sidebar">
             <div className="prose">
-              <img src="https://tensai.org.in/wp-content/uploads/2017/08/About-Us.jpg" alt="About TIJL" className="feature-img" />
+              <img src="/images/about-us.jpg" alt="About TIJL" className="feature-img" />
               <h2>About Tensai Institute of Japanese Language</h2>
               <p>TIJL is a highly reputed Japanese language training institute in the Delhi NCR region. The training provided in the institute is aimed towards helping students pass the JLPT (Japanese Language Proficiency Test).</p>
               <p>TIJL Institute offers students many opportunities — more than 1600 Japanese companies are operating in India in sectors like automobile, electronics, power systems, software development and many more. There are very good career opportunities and also higher study options in Japan.</p>
@@ -29,7 +29,7 @@ export default function AboutPage() {
 
               <h3>Our Director</h3>
               <img
-                src="https://tensai.org.in/wp-content/uploads/2017/08/director-ten.jpg"
+                src="/images/director.jpg"
                 alt="Director"
                 style={{ width: 200, maxWidth: '100%', borderRadius: 12, border: '1px solid var(--border)', marginBottom: 16 }}
               />

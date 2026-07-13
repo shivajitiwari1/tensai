@@ -3,12 +3,12 @@ import { useState } from 'react'
 import Breadcrumb from '@/components/Breadcrumb'
 
 const galleryImages = [
-  { src: 'https://tensai.org.in/wp-content/uploads/2017/08/About-Us.jpg', alt: 'About Us' },
-  { src: 'https://tensai.org.in/wp-content/uploads/2016/10/Japanese-Education.jpg', alt: 'Japanese Education' },
-  { src: 'https://tensai.org.in/wp-content/uploads/2016/10/JLPT-FINAL.jpg', alt: 'JLPT' },
-  { src: 'https://tensai.org.in/wp-content/uploads/2017/03/placement.jpg', alt: 'Placement' },
-  { src: 'https://tensai.org.in/wp-content/uploads/2017/08/director-ten.jpg', alt: 'Director' },
-  { src: 'https://tensai.org.in/wp-content/uploads/2019/04/cropped-Tensai-Logo-copy-2.jpg', alt: 'Tensai Logo' },
+  { src: '/images/about-us.jpg', alt: 'About Us' },
+  { src: '/images/japanese-education.jpg', alt: 'Japanese Education' },
+  { src: '/images/jlpt.jpg', alt: 'JLPT' },
+  { src: '/images/placement.jpg', alt: 'Placement' },
+  { src: '/images/director.jpg', alt: 'Director' },
+  { src: '/images/logo.jpg', alt: 'Tensai Logo' },
 ]
 
 export default function GalleryPage() {

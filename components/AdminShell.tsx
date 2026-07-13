@@ -78,7 +78,7 @@ export default function AdminShell({ children, title }: AdminShellProps) {
           {/* Logo row + close button */}
           <div className="admin-sidebar-logo">
             <img
-              src="https://tensai.org.in/wp-content/uploads/2019/04/cropped-Tensai-Logo-copy-2.jpg"
+              src="/images/logo.jpg"
               alt="Tensai"
             />
             <div style={{ flex: 1 }}>

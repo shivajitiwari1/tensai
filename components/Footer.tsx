@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>TIJL © All Rights Reserved 2025</span>
+        <span>TIJL © All Rights Reserved {new Date().getFullYear()}</span>
         <span>Tensai Japanese Language Institute, Noida</span>
       </div>
     </footer>

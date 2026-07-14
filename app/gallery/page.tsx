@@ -7,7 +7,6 @@ const galleryImages = [
   { src: '/images/gallery/teachers-day-cake.jpg',    alt: "Teacher's Day Celebration", category: 'Events' },
   { src: '/images/gallery/teachers-day-group.jpg',   alt: "Teacher's Day Group Photo",  category: 'Events' },
   { src: '/images/gallery/birthday-cake.jpg',        alt: 'Tensai Birthday Celebration', category: 'Events' },
-  { src: '/images/gallery/birthday-group.jpg',       alt: 'Birthday Celebration Group',  category: 'Events' },
   { src: '/images/gallery/celebration-group.jpg',    alt: 'Institute Celebration',        category: 'Events' },
   // ── Cultural photos ──
   { src: '/images/gallery/kimono-duo.jpg',           alt: 'Students in Kimono',           category: 'Culture' },

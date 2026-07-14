@@ -280,6 +280,11 @@
       "badge": "Level VI — N2",
       "title": "Advanced Japanese Language Course",
       "desc": "This course introduces advanced level sentence patterns and conversation. After completion, students will be able to have smooth conversation with Japanese speakers on different topics and write or translate business-related documents. It enables interpretation proficiency and makes students eligible for N2 of JLPT."
+    },
+    {
+      "badge": "Level VII — N1",
+      "title": "Proficiency Japanese Language Course",
+      "desc": "The highest level of Japanese proficiency. This course is designed for students who have mastered N2 and are aiming for native-level fluency. It covers complex grammar, advanced kanji, abstract reading comprehension, and high-level listening skills required to pass N1 of the Japanese Language Proficiency Test."
     }
   ],
   "placementSectors": [

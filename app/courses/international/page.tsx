@@ -12,8 +12,8 @@ export default function InternationalPage() {
         <div className="container">
           <div className="content-with-sidebar">
             <div className="prose">
-              <h2>International Language Coaching at TIJL</h2>
-              <p>TIJL is one of the prominent international language coaching institutes, offering specialized courses with a focus on career applications and global communication.</p>
+              <h2>International Language Institute at TIJL</h2>
+              <p>TIJL is one of the prominent international language institutes, offering specialized courses with a focus on career applications and global communication.</p>
               <p>Why choose TIJL for international language courses?</p>
               <ul>
                 <li>Experienced faculty with expertise in multiple foreign languages</li>

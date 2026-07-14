@@ -25,7 +25,7 @@
     {
       "tag": "Premier Japanese Institute",
       "title": "Learn Japanese, Unlock a World of Opportunity",
-      "desc": "TIJL is Delhi NCR's most trusted Japanese language institute, with 15+ years of excellence in JLPT coaching and career placement.",
+      "desc": "TIJL is Delhi NCR's most trusted Japanese language institute, with 15+ years of excellence in JLPT training and career placement.",
       "bg": "/images/japanese-education.jpg",
       "btn1": {
         "label": "Explore Courses",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "tag": "JLPT Certified Coaching",
+      "tag": "JLPT Certified Institute",
       "title": "All Five JLPT Levels — N5 to N1",
       "desc": "Comprehensive preparation for the Japanese Language Proficiency Test with expert faculty, updated study material, and mock exams.",
       "bg": "/images/jlpt.jpg",
@@ -99,7 +99,7 @@
       "id": "jlpt",
       "title": "JLPT Preparation",
       "badge": "Certified",
-      "desc": "Intensive exam preparation for all five JLPT levels with mock tests, past papers, and focused coaching sessions.",
+      "desc": "Intensive exam preparation for all five JLPT levels with mock tests, past papers, and focused training sessions.",
       "kanji": "試験",
       "tag": "July & December Exams",
       "href": "/courses/jlpt"
@@ -108,7 +108,7 @@
       "id": "international",
       "title": "International Language",
       "badge": "New",
-      "desc": "Expand beyond Japanese with our international language coaching programs, delivered by specialist faculty.",
+      "desc": "Expand beyond Japanese with our international language institute programs, delivered by specialist faculty.",
       "kanji": "語学",
       "tag": "Multiple Languages",
       "href": "/courses/international"

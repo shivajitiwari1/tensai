@@ -19,7 +19,7 @@ export default function JapanesePage() {
           <div className="course-hero-grid">
             <div className="hero-copy">
               <span className="eyebrow">Japanese Language Programme</span>
-              <h1 className="course-title">Premium Japanese institute coaching for JLPT success</h1>
+              <h1 className="course-title">Premium Japanese Language Institute for JLPT Success</h1>
               <p className="course-intro">Unlock fluent Japanese with blended online + offline training, expert faculty, and JLPT-focused lessons designed for every learner.</p>
 
               <ul className="hero-features">

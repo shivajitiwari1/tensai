@@ -83,7 +83,7 @@ export default function JLPTPage() {
 
       <CTABand
         title="Prepare for Your JLPT with TIJL"
-        desc="Expert coaching for all 5 JLPT levels. Start preparing today."
+        desc="Expert training for all 5 JLPT levels. Start preparing today."
         btn1={{ label: 'Enrol Now', href: '/registration' }}
         btn2={{ label: 'View Fees', href: '/fees' }}
       />

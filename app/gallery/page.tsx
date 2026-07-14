@@ -3,16 +3,30 @@ import { useState } from 'react'
 import Breadcrumb from '@/components/Breadcrumb'
 
 const galleryImages = [
-  { src: '/images/about-us.jpg', alt: 'About Us' },
-  { src: '/images/japanese-education.jpg', alt: 'Japanese Education' },
-  { src: '/images/jlpt.jpg', alt: 'JLPT' },
-  { src: '/images/placement.jpg', alt: 'Placement' },
-  { src: '/images/director.jpg', alt: 'Director' },
-  { src: '/images/logo.jpg', alt: 'Tensai Logo' },
+  // ── Event photos ──
+  { src: '/images/gallery/teachers-day-cake.jpg',    alt: "Teacher's Day Celebration", category: 'Events' },
+  { src: '/images/gallery/teachers-day-group.jpg',   alt: "Teacher's Day Group Photo",  category: 'Events' },
+  { src: '/images/gallery/birthday-cake.jpg',        alt: 'Tensai Birthday Celebration', category: 'Events' },
+  { src: '/images/gallery/birthday-group.jpg',       alt: 'Birthday Celebration Group',  category: 'Events' },
+  { src: '/images/gallery/celebration-group.jpg',    alt: 'Institute Celebration',        category: 'Events' },
+  // ── Cultural photos ──
+  { src: '/images/gallery/kimono-duo.jpg',           alt: 'Students in Kimono',           category: 'Culture' },
+  { src: '/images/gallery/kimono-solo.jpg',          alt: 'Student in Kimono',            category: 'Culture' },
+  // ── Institute photos ──
+  { src: '/images/about-us.jpg',         alt: 'About TIJL',         category: 'Institute' },
+  { src: '/images/japanese-education.jpg', alt: 'Japanese Education', category: 'Institute' },
+  { src: '/images/jlpt.jpg',             alt: 'JLPT Training',      category: 'Institute' },
+  { src: '/images/placement.jpg',        alt: 'Placement Support',  category: 'Institute' },
+  { src: '/images/director.jpg',         alt: 'Director',           category: 'Institute' },
 ]
 
+const categories = ['All', 'Events', 'Culture', 'Institute']
+
 export default function GalleryPage() {
-  const [lightbox, setLightbox] = useState<string | null>(null)
+  const [lightbox, setLightbox]   = useState<string | null>(null)
+  const [active, setActive]       = useState('All')
+
+  const filtered = active === 'All' ? galleryImages : galleryImages.filter(i => i.category === active)
 
   return (
     <>
@@ -24,11 +38,27 @@ export default function GalleryPage() {
             <span className="eyebrow">Our Institute</span>
             <h2>Gallery</h2>
             <div className="divider" />
-            <p>A glimpse into life at Tensai Japanese Language Institute.</p>
+            <p>A glimpse into life at Tensai Institute of Japanese Language.</p>
+          </div>
+
+          {/* Filter tabs */}
+          <div style={{ display: 'flex', gap: 10, justifyContent: 'center', marginBottom: 32, flexWrap: 'wrap' }}>
+            {categories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setActive(cat)}
+                style={{
+                  padding: '8px 22px', borderRadius: 24, border: '2px solid var(--red)',
+                  background: active === cat ? 'var(--red)' : 'transparent',
+                  color: active === cat ? '#fff' : 'var(--red)',
+                  fontWeight: 600, cursor: 'pointer', fontSize: 14, transition: 'all .2s'
+                }}
+              >{cat}</button>
+            ))}
           </div>
 
           <div className="gallery-grid">
-            {galleryImages.map((img, i) => (
+            {filtered.map((img, i) => (
               <div key={i} className="gallery-item" onClick={() => setLightbox(img.src)}>
                 <img src={img.src} alt={img.alt} />
                 <div className="gallery-overlay"><span>🔍</span></div>
@@ -38,7 +68,6 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Lightbox */}
       {lightbox && (
         <div
           onClick={() => setLightbox(null)}

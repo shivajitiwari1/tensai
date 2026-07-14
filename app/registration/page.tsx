@@ -205,6 +205,7 @@ export default function RegistrationPage() {
                       <option>Level IV — Intermediate (N4)</option>
                       <option>Level V — Upper Intermediate (N3)</option>
                       <option>Level VI — Advanced (N2)</option>
+                      <option>Level VII — Proficiency (N1)</option>
                       <option>JLPT Preparation</option>
                       <option>International Language</option>
                     </select>

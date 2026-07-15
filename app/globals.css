@@ -268,7 +268,7 @@ body {
 .hero-slide.active .hero-slide-bg { transform: scale(1); }
 .hero-slide-overlay {
   position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(90deg, rgba(5,0,0,.97) 0%, rgba(5,0,0,.97) 35%, rgba(5,0,0,.72) 60%, rgba(5,0,0,.35) 100%);
+  background: linear-gradient(90deg, rgba(5,0,0,.97), rgba(5,0,0,.97) 0%, rgba(5,0,0,.72) 63%, rgba(5,0,0,.35));
 }
 .hero-content {
   position: relative; max-width: 1200px; margin: auto; padding: 0 48px;

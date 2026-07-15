@@ -258,16 +258,16 @@ body {
 .hero { position: relative; overflow: hidden; height: 520px; background: #1a0a0a; }
 .hero-slide {
   position: absolute; inset: 0; display: flex; align-items: center;
-  opacity: 0; transition: opacity .9s ease;
+  opacity: 0; transition: opacity .9s ease; pointer-events: none;
 }
-.hero-slide.active { opacity: 1; }
+.hero-slide.active { opacity: 1; pointer-events: auto; }
 .hero-slide-bg {
   position: absolute; inset: 0; background-size: cover; background-position: center;
   transform: scale(1.04); transition: transform 6s ease;
 }
 .hero-slide.active .hero-slide-bg { transform: scale(1); }
 .hero-slide-overlay {
-  position: absolute; inset: 0;
+  position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(90deg, rgba(5,0,0,.97) 0%, rgba(5,0,0,.97) 35%, rgba(5,0,0,.72) 60%, rgba(5,0,0,.35) 100%);
 }
 .hero-content {

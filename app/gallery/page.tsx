@@ -9,6 +9,8 @@ const galleryImages = [
   { src: '/images/gallery/birthday-cake.jpg',        alt: 'Tensai Birthday Celebration', category: 'Events' },
   { src: '/images/gallery/celebration-group.jpg',    alt: 'Institute Celebration',        category: 'Events' },
   // ── Institute photos ──
+  { src: '/images/gallery/tensai-promo-1.jpg', alt: 'Tensai Japanese Language Institute', category: 'Institute' },
+  { src: '/images/gallery/tensai-promo-2.jpg', alt: 'Tensai — Japanese Language Courses', category: 'Institute' },
   { src: '/images/japanese-education.jpg', alt: 'Japanese Education', category: 'Institute' },
   { src: '/images/jlpt.jpg',             alt: 'JLPT Training',      category: 'Institute' },
   { src: '/images/placement.jpg',        alt: 'Placement Support',  category: 'Institute' },

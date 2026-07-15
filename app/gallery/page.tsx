@@ -8,11 +8,7 @@ const galleryImages = [
   { src: '/images/gallery/teachers-day-group.jpg',   alt: "Teacher's Day Group Photo",  category: 'Events' },
   { src: '/images/gallery/birthday-cake.jpg',        alt: 'Tensai Birthday Celebration', category: 'Events' },
   { src: '/images/gallery/celebration-group.jpg',    alt: 'Institute Celebration',        category: 'Events' },
-  // ── Cultural photos ──
-  { src: '/images/gallery/kimono-duo.jpg',           alt: 'Students in Kimono',           category: 'Culture' },
-  { src: '/images/gallery/kimono-solo.jpg',          alt: 'Student in Kimono',            category: 'Culture' },
   // ── Institute photos ──
-  { src: '/images/about-us.jpg',         alt: 'About TIJL',         category: 'Institute' },
   { src: '/images/japanese-education.jpg', alt: 'Japanese Education', category: 'Institute' },
   { src: '/images/jlpt.jpg',             alt: 'JLPT Training',      category: 'Institute' },
   { src: '/images/placement.jpg',        alt: 'Placement Support',  category: 'Institute' },
